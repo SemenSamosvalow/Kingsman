@@ -12,26 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Kingsman.Windows
+namespace Kingsman.Windows.LogIn
 {
     /// <summary>
-    /// Логика взаимодействия для AuthWindow.xaml
+    /// Логика взаимодействия для ForgotPasswordWindow.xaml
     /// </summary>
-    public partial class AuthWindow : Window
+    public partial class ForgotPasswordWindow : Window
     {
-        public AuthWindow()
+        public ForgotPasswordWindow()
         {
             InitializeComponent();
         }
-
-        private void BtnLogIn_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void BtnReg_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
-}   
+}

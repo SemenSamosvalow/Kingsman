@@ -5,8 +5,161 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman.Windows"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="AuthWindow" 
+        Height="460" 
+        Width="400"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="456">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/Background.jpg" 
+                        Opacity="0.2"
+                        Stretch="Fill"/>
+        </Grid.Background>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="180"/>
+            <ColumnDefinition Width="110"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Source ="/Res/LogoIcon.png" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Opacity="0.9" Height="83" Margin="0,22,0,0" Width="78"/>
+
+        <StackPanel    Grid.Column="1"
+                       Margin="0,90,0,10">
+            
+            <TextBlock Grid.Column="1"
+                       Text="Kingsman"
+                       FontSize="20"
+                       FontWeight="ExtraBold"
+                       FontStyle="Italic"
+                       Foreground="DarkGoldenrod"
+                       Margin="0,1,0,0"
+                       VerticalAlignment="Center"
+                       Width="100"
+                       Height="30"/>
+
+            <TextBlock Grid.Column="1"
+                       Text="Авторизация"
+                       FontSize="16"
+                       FontWeight="DemiBold"
+                       Foreground="DarkSlateGray"
+                       Margin="0,50,0,0"
+                       VerticalAlignment="Center"
+                       Width="100"
+                       Height="20"/>
+
+            <TextBlock Grid.Column="1"
+                       Text="Логин:" 
+                       FontSize="13"
+                       FontWeight="Medium"
+                       Foreground="DarkSlateGray"
+                       Margin="0,20,0,0" />
+
+            <TextBox x:Name="TBLogin"
+                       Grid.Column="1"
+                       FontSize="13"
+                       FontWeight="Medium"
+                       Foreground="DarkSlateGray"
+                       CaretBrush="LightGray"
+                       BorderBrush="DarkSlateGray"
+                       BorderThickness="0,0,0,1.5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Width="180"
+                       Height="20" 
+                       Margin="0,10,0,0"
+                       Padding="20,0,0,0">    
+
+                <TextBox.Background>
+                    <ImageBrush ImageSource="/Res/UserIcon.png" 
+                                Stretch="Uniform" 
+                                AlignmentX="Left"/>
+                </TextBox.Background>
+                
+            </TextBox>
+
+            <TextBlock Grid.Column="1"
+                       Text="Пароль:"                   
+                       FontSize="13"
+                       FontWeight="Medium"
+                       Foreground="DarkSlateGray" 
+                       Margin="0,20,0,0" />
+
+            <PasswordBox x:Name="PBReg"
+                         Grid.Column="1"
+                         FontSize="13"
+                         FontWeight="Medium"    
+                         Foreground="DarkSlateGray"
+                         CaretBrush="LightGray"
+                         BorderBrush="DarkSlateGray"
+                         BorderThickness="0,0,0,1.5"
+                         VerticalAlignment="Center"
+                         HorizontalAlignment="Left"
+                         Width="180"
+                         Height="20" 
+                         Margin="0,10,0,0"
+                         Padding="20,0,0,0">    
+
+                <PasswordBox.Background>
+                    <ImageBrush ImageSource="/Res/KeyIcon.png" 
+                                Stretch="Uniform" 
+                                AlignmentX="Left" />
+                </PasswordBox.Background>
+                
+            </PasswordBox>
+
+            <TextBlock HorizontalAlignment="Center"
+                       FontSize="11"
+                       FontStyle="Italic"                      
+                       Margin="0,2,0,0"
+                       FontWeight="Bold">
+                
+                <Hyperlink NavigateUri="ForgotPasswordWindow.xaml">
+                    Забыли пароль?
+                </Hyperlink>
+                
+            </TextBlock>
+
+
+            <Button x:Name="BtnLogIn"
+                    Width="150"
+                    Height="30"
+                    Margin="0,20,0,0"
+                    FontWeight="Bold"
+                    Content="Войти"
+                    Foreground="Azure"
+                    Background="DarkSlateGray" 
+                    Click="BtnLogIn_Click">
+                
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" 
+                                Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button x:Name="BtnReg"
+                    Width="150"
+                    Height="30"
+                    Margin="0,8,0,0"
+                    FontWeight="Bold"
+                    Content="Зарегистрироваться"
+                    Foreground="Azure"
+                    Background="DarkSlateGray" 
+                    Click="BtnReg_Click">
+
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" 
+                                Value="10"/>
+                    </Style>
+                </Button.Resources>
+
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>

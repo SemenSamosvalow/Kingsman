@@ -58,6 +58,9 @@
     <Compile Include="Windows\Cabinet\AdminCabinetWindow.xaml.cs">
       <DependentUpon>AdminCabinetWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\LogIn\ForgotPasswordWindow.xaml.cs">
+      <DependentUpon>ForgotPasswordWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PayWindow.xaml.cs">
       <DependentUpon>PayWindow.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\LogIn\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LogIn\ForgotPasswordWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -133,7 +140,18 @@
     <Folder Include="ClassHelper\" />
     <Folder Include="DB\" />
     <Folder Include="Pages\" />
-    <Folder Include="Res\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\LogoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\UserIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\KeyIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
