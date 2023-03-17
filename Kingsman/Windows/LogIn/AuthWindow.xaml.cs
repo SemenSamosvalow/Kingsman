@@ -26,11 +26,26 @@ namespace Kingsman.Windows
 
         private void BtnLogIn_Click(object sender, RoutedEventArgs e)
         {
-            
+            var userAuth = ClassHelper.EF.Context.Staff.ToList().
+                Where(i => i.Login == TBLogin.Text && i.Password == PBPassword.Password).FirstOrDefault();
+
+            if (userAuth != null)
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
         {
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            this.Close();
 
         }
     }

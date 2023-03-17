@@ -88,7 +88,7 @@
                        Foreground="DarkSlateGray" 
                        Margin="0,20,0,0" />
 
-            <PasswordBox x:Name="PBReg"
+            <PasswordBox x:Name="PBPassword"
                          Grid.Column="1"
                          FontSize="13"
                          FontWeight="Medium"    

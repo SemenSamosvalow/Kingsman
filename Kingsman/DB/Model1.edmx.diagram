@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6369251504a142119de8dc893a010e57" Name="Diagram1">
+        <EntityTypeShape EntityType="KingsmanModel.Category" Width="1.5" PointX="3.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.Client" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.ClientService" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.Measurment" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.Order" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.Service" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.Staff" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KingsmanModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="KingsmanModel.FK_Service_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="KingsmanModel.FK_Measurment_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="KingsmanModel.FK_Order_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="KingsmanModel.FK_ClientService_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="KingsmanModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="KingsmanModel.FK_Order_Staff" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
