@@ -5,9 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/Background.jpg" 
+                        Opacity="0.2"/>
+        </Grid.Background>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125"/>
+            <ColumnDefinition Width="680"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                BorderBrush="Gray"
+                BorderThickness="0,0,1,0"/>
+        <StackPanel Grid.Column = "0">
+
+            <!--<Border BorderBrush="Black" 
+                    BorderThickness="0,0,6,0">
+                
+            </Border>-->
+            <Button x:Name="BtnService"
+                    Margin="0,20,0,0"
+                    Height="55"
+                    Width="70"
+                    Click="BtnService_Click"
+                    Background="Transparent"
+                    BorderThickness="0.4,0.4,0.4,0.4">
+                <Image Source="/Res/Service.png"
+                       Stretch="Fill"/>
+
+            </Button>
+            
+            <TextBlock Text="Записаться на услугу"
+                       Margin="1,5,0,0"
+                       Width="120"
+                       Foreground="DarkSlateGray"
+                       FontWeight="Medium"/>
+            
+        </StackPanel>
+        <Frame x:Name="Frame" 
+               Grid.Column="1"/>
     </Grid>
 </Window>

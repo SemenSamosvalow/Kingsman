@@ -1,5 +1,4 @@
-﻿using Kingsman.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Kingsman
+namespace Kingsman.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ServicePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ServicePage : Page
     {
-        public MainWindow()
+        public ServicePage()
         {
             InitializeComponent();
-        }
-
-        private void BtnService_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Content = new ServicePage();
         }
     }
 }
