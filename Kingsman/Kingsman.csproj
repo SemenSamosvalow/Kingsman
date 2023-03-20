@@ -231,7 +231,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Resource Include="Res\Service.png" />
-    <Resource Include="Res\scissors.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
