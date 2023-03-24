@@ -30,6 +30,7 @@ namespace Kingsman.DB
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<ClientService> ClientService { get; set; }
+        public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Measurment> Measurment { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Service> Service { get; set; }

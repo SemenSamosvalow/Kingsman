@@ -5,20 +5,22 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="6369251504a142119de8dc893a010e57" Name="Diagram1">
-        <EntityTypeShape EntityType="KingsmanModel.Category" Width="1.5" PointX="3.75" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.Client" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.ClientService" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.Measurment" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.Order" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.Service" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.Staff" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KingsmanModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
-        <AssociationConnector Association="KingsmanModel.FK_Service_Category" ManuallyRouted="false" />
-        <AssociationConnector Association="KingsmanModel.FK_Measurment_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="KingsmanModel.FK_Order_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="KingsmanModel.FK_ClientService_Order" ManuallyRouted="false" />
-        <AssociationConnector Association="KingsmanModel.FK_ClientService_Service" ManuallyRouted="false" />
-        <AssociationConnector Association="KingsmanModel.FK_Order_Staff" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="KingsmanModel.Category" Width="1.5" PointX="6" PointY="9.25" />
+        <EntityTypeShape EntityType="KingsmanModel.Client" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="KingsmanModel.ClientService" Width="1.5" PointX="10.5" PointY="5" />
+        <EntityTypeShape EntityType="KingsmanModel.Gender" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="KingsmanModel.Measurment" Width="1.5" PointX="5.25" PointY="4.75" />
+        <EntityTypeShape EntityType="KingsmanModel.Order" Width="1.5" PointX="8.25" PointY="5" />
+        <EntityTypeShape EntityType="KingsmanModel.Service" Width="1.5" PointX="8.25" PointY="9" />
+        <EntityTypeShape EntityType="KingsmanModel.Staff" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="KingsmanModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.875" />
+        <AssociationConnector Association="KingsmanModel.FK_Service_Category" />
+        <AssociationConnector Association="KingsmanModel.FK_Client_Gender" />
+        <AssociationConnector Association="KingsmanModel.FK_Measurment_Client" />
+        <AssociationConnector Association="KingsmanModel.FK_Order_Client" />
+        <AssociationConnector Association="KingsmanModel.FK_ClientService_Order" />
+        <AssociationConnector Association="KingsmanModel.FK_ClientService_Service" />
+        <AssociationConnector Association="KingsmanModel.FK_Order_Staff" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

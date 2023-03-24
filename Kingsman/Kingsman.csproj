@@ -74,6 +74,9 @@
     <Compile Include="DB\ClientService.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DB\Gender.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\Measurment.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

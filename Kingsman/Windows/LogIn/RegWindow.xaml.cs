@@ -22,6 +22,64 @@ namespace Kingsman.Windows
         public RegWindow()
         {
             InitializeComponent();
+
+            CmbGedner.ItemsSource = ClassHelper.EF.Context.Gender.ToList();
+            CmbGedner.DisplayMemberPath = "GenderName";
+            CmbGedner.SelectedIndex= 0;
+        }
+
+        private void BtnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (string.IsNullOrWhiteSpace(TBLastName.Text))
+            {
+                MessageBox.Show("Поле Фамилия не заполнено");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(TBFirstName.Text))
+            {
+                MessageBox.Show("Поле Имя не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TBPhone.Text))
+            {
+                MessageBox.Show("Поле Телефон не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TBLogin.Text))
+            {
+                MessageBox.Show("Заполните логин");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(PBPassword.Password))
+            {
+                MessageBox.Show("Заполните пароль");
+                return;
+            }
+
+
+
+            DB.Client addClient = new DB.Client();
+            addClient.Login = TBLogin.Text;
+            addClient.Password = PBPassword.Password;
+            addClient.LastName = TBLastName.Text;
+            addClient.FirstName= TBFirstName.Text;
+            if (TBPatronymic.Text != string.Empty)
+            {
+                addClient.Patronymic = TBPatronymic.Text;
+            }
+            addClient.Phone= TBPhone.Text;
+            addClient.Gender = (CmbGedner.SelectedItem as DB.Gender).GenderName;
+
+            ClassHelper.EF.Context.Client.Add(addClient);
+
+            ClassHelper.EF.Context.SaveChanges();
+
+            MessageBox.Show("Пользователь успешно добавлен");
+
+
+
         }
     }
 }

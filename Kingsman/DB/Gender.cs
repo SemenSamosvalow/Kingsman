@@ -12,29 +12,18 @@ namespace Kingsman.DB
     using System;
     using System.Collections.Generic;
     
-    public partial class Client
+    public partial class Gender
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Client()
+        public Gender()
         {
-            this.Measurment = new HashSet<Measurment>();
-            this.Order = new HashSet<Order>();
+            this.Client = new HashSet<Client>();
         }
     
-        public int Id { get; set; }
-        public string LastName { get; set; }
-        public string FirstName { get; set; }
-        public string Patronymic { get; set; }
-        public string Gender { get; set; }
-        public string Phone { get; set; }
-        public System.DateTime Birthday { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public string Id { get; set; }
+        public string GenderName { get; set; }
     
-        public virtual Gender Gender1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Measurment> Measurment { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<Client> Client { get; set; }
     }
 }
