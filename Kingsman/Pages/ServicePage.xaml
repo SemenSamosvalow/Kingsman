@@ -5,38 +5,89 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Kingsman.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="ServicePage">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Услуги"
-                   FontSize="24"
-                   FontWeight="Bold"
-                   Margin="10"/>
+        <TextBlock Text="Список услуг"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="30"
+                   FontWeight="Bold"/>
+        <ListView x:Name="LvService" 
+                  Grid.Row="2" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
-        <DataGrid Grid.Row="1"
-                  AutoGenerateColumns="False"
-                  CanUserAddRows="False"
-                  Width="680">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Навзание"
-                                    Width="300"
-                                    CanUserResize="False"/>
-                <DataGridTextColumn Header="Стоимость"
-                                    Width="150"
-                                    CanUserResize="False"/>
-            </DataGrid.Columns>
-        </DataGrid>
+            <!-- Представление в виде таблицы -->
+            <!--<ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название" Width="200" DisplayMemberBinding="{Binding ServiceName}"/>
+                    <GridViewColumn Header="Описание" Width="200" DisplayMemberBinding="{Binding Description}"/>
+                    <GridViewColumn Header="Цена" Width="200" DisplayMemberBinding="{Binding Price}"/>
+                    <GridViewColumn Header="Тип услуги" Width="200" DisplayMemberBinding="{Binding ServiceType.TypeName}"/>
+                </GridView>
+            </ListView.View>-->
 
-        <Button Grid.Row="2"
-                Content="Записаться"
-                Margin="10"
-                Width="150"/>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray"
+                            BorderThickness="2"
+                            Width="200"
+                            Height="300"
+                            Margin="16"
+                            CornerRadius="8">
+                        <StackPanel>
+                            <Image Height="180"
+                                   Width="200" 
+                                   Margin="8">
+                                <Image.Source>
+                                    <Binding Path ="Image">
+                                        <Binding.TargetNullValue>
+                                            <ImageSource>/Res/Shoes.jpg</ImageSource>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+
+                            <TextBlock Text="{Binding NameOfService}"
+                                       FontSize="18"
+                                       Margin="5 3"/>
+                            <TextBlock Text="{Binding Cost}"
+                                       FontSize="18"
+                                       Margin="5 3"/>
+                            <TextBlock Text="{Binding Description}"
+                                       FontSize="18"
+                                       Margin="5 3"
+                                       TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
+                        </StackPanel>
+
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Button x:Name="BtnAddService"
+                Grid.Row="3"
+                Width="40"
+                Height="40"
+                Background="Black"
+                BorderThickness="0"
+                HorizontalAlignment="Right"
+                Margin="0 0 20 0"/>
     </Grid>
 </Page>

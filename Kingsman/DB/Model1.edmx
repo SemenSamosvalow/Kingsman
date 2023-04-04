@@ -21,7 +21,7 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Patronymic" Type="varchar" MaxLength="50" />
-          <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="GenderCode" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="Phone" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="Birthday" Type="date" Nullable="false" />
           <Property Name="Login" Type="varchar" MaxLength="50" Nullable="false" />
@@ -106,7 +106,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Client">
-              <PropertyRef Name="Gender" />
+              <PropertyRef Name="GenderCode" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -324,7 +324,7 @@
             <End Role="Staff" EntitySet="Staff" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          </EntityContainer>
+        </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -353,12 +353,12 @@
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="GenderCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
           <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Gender1" Relationship="KingsmanModel.FK_Client_Gender" FromRole="Client" ToRole="Gender" />
+          <NavigationProperty Name="Gender" Relationship="KingsmanModel.FK_Client_Gender" FromRole="Client" ToRole="Gender" />
           <NavigationProperty Name="Measurment" Relationship="KingsmanModel.FK_Measurment_Client" FromRole="Client" ToRole="Measurment" />
           <NavigationProperty Name="Order" Relationship="KingsmanModel.FK_Order_Client" FromRole="Client" ToRole="Order" />
         </EntityType>
@@ -463,7 +463,7 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Client">
-              <PropertyRef Name="Gender" />
+              <PropertyRef Name="GenderCode" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -527,7 +527,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -573,7 +573,7 @@
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Birthday" ColumnName="Birthday" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="GenderCode" ColumnName="GenderCode" />
                 <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
@@ -659,7 +659,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          </EntityContainerMapping>
+        </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
