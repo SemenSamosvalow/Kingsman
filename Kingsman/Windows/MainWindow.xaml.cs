@@ -28,7 +28,14 @@ namespace Kingsman
 
         private void BtnService_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Content = new ServicePage();
+            MainFrame.NavigationService.Navigate(new Pages.ServicePage());
+
+            //ServiceFrame.Content = new ServicePage();
+
+        }
+        private void BtnCart_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Pages.CartPage());
         }
     }
 }

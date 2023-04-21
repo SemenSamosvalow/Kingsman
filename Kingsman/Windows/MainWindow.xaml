@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="450" 
-        Width="800"
+        Width="900"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize">
     <Grid>
@@ -47,9 +47,27 @@
                        Width="120"
                        Foreground="DarkSlateGray"
                        FontWeight="Medium"/>
-            
+
+            <Button x:Name="BtnCart"
+                    Margin="0,30,0,0"
+                    Height="55"
+                    Width="70"
+                    Background="Transparent"
+                    Click="BtnCart_Click"
+                    BorderThickness="0.4,0.4,0.4,0.4">
+                <Image Source="/Res/cart.png"
+                       Stretch="Fill"/>
+            </Button>
+
+            <TextBlock Text="Корзина"
+                       Margin="1,5,0,0"                
+                       Width="50"
+                       Foreground="DarkSlateGray"
+                       FontWeight="Medium"/>
+
         </StackPanel>
-        <Frame x:Name="Frame" 
-               Grid.Column="1"/>
+
+        <Frame x:Name="MainFrame" 
+               Grid.Column="1" Margin="0,0,-95,0"/>
     </Grid>
 </Window>

@@ -16,19 +16,13 @@ using System.Windows.Shapes;
 namespace Kingsman.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для ServicePage.xaml
+    /// Логика взаимодействия для CartPage.xaml
     /// </summary>
-    public partial class ServicePage : Page
+    public partial class CartPage : Page
     {
-        public ServicePage()
+        public CartPage()
         {
             InitializeComponent();
-            GetListService();
-        }
-
-        private void GetListService()
-        {
-            LvService.ItemsSource = ClassHelper.EF.Context.Service.ToList();
         }
     }
 }
