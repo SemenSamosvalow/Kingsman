@@ -75,7 +75,7 @@
 
 
             <TextBlock Text="Выберите тип услуги"
-                       FontSize="18"
+                       FontSize="14"
                        HorizontalAlignment="Center"
                        Margin="0 16 0 0"/>
             <ComboBox x:Name="CmbTypeService"
