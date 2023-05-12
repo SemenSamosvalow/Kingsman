@@ -60,8 +60,8 @@ namespace Kingsman.Windows
 
 
 
-            DB.Client addClient = new DB.Client();
-            addClient.Login = TBLogin.Text;
+            DB.Clients addClient = new DB.Clients();
+            addClient.LogIn = TBLogin.Text;
             addClient.Password = PBPassword.Password;
             addClient.LastName = TBLastName.Text;
             addClient.FirstName= TBFirstName.Text;
@@ -70,10 +70,10 @@ namespace Kingsman.Windows
                 addClient.Patronymic = TBPatronymic.Text;
             }
             addClient.Phone= TBPhone.Text;
-            addClient.GenderCode = (CmbGedner.SelectedItem as DB.Gender).GenderName;
+            //addClient.GenderCode = (CmbGedner.SelectedItem as DB.Gender).GenderName;
             addClient.Birthday =  Convert.ToDateTime(TBBirtday.Text);
 
-            ClassHelper.EF.Context.Client.Add(addClient);
+            ClassHelper.EF.Context.Clients.Add(addClient);
 
             ClassHelper.EF.Context.SaveChanges();
 

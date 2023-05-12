@@ -68,7 +68,7 @@
     <Compile Include="DB\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Client.cs">
+    <Compile Include="DB\Clients.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\ClientService.cs">
@@ -116,6 +116,9 @@
     <Compile Include="Pages\CartPage.xaml.cs">
       <DependentUpon>CartPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ClientsPage.xaml.cs">
+      <DependentUpon>ClientsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ServicePage.xaml.cs">
       <DependentUpon>ServicePage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,10 @@
       <DependentUpon>UserCabinetWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Pages\CartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ClientsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,16 +231,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DB\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Resource Include="Res\cart.png" />
     <Resource Include="Res\ClothesImage\pod.jpg" />
     <Resource Include="Res\ClothesImage\Shoes.jpg" />
@@ -255,6 +252,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

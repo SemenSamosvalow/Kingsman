@@ -37,5 +37,10 @@ namespace Kingsman
         {
             MainFrame.NavigationService.Navigate(new Pages.CartPage());
         }
+
+        private void Btn_Clients_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Pages.ClientsPage());
+        }
     }
 }

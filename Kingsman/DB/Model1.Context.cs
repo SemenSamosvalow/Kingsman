@@ -15,10 +15,10 @@ namespace Kingsman.DB
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class Entities : DbContext
+    public partial class Entities2 : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public Entities2()
+            : base("name=Entities2")
         {
         }
     
@@ -28,7 +28,7 @@ namespace Kingsman.DB
         }
     
         public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<Client> Client { get; set; }
+        public virtual DbSet<Clients> Clients { get; set; }
         public virtual DbSet<ClientService> ClientService { get; set; }
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Measurment> Measurment { get; set; }

@@ -27,7 +27,7 @@ namespace Kingsman.Windows
         private void BtnLogIn_Click(object sender, RoutedEventArgs e)
         {
             var userAuth = ClassHelper.EF.Context.Staff.ToList().
-                Where(i => i.Login == TBLogin.Text && i.Password == PBPassword.Password).FirstOrDefault();
+                Where(i => i.LogIn == TBLogin.Text && i.Password == PBPassword.Password).FirstOrDefault();
 
             if (userAuth != null)
             {

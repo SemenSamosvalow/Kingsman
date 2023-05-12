@@ -16,13 +16,13 @@ namespace Kingsman.DB
     {
         public int Id { get; set; }
         public int ClientId { get; set; }
-        public decimal Heigh { get; set; }
+        public decimal Height { get; set; }
         public decimal ChestSize { get; set; }
         public decimal WaistSize { get; set; }
         public decimal HipSize { get; set; }
         public int FootSize { get; set; }
         public decimal HeadSize { get; set; }
     
-        public virtual Client Client { get; set; }
+        public virtual Clients Clients { get; set; }
     }
 }

@@ -64,6 +64,22 @@
                        Width="50"
                        Foreground="DarkSlateGray"
                        FontWeight="Medium"/>
+            
+            <Button x:Name="BtnClients"
+                    Margin="0,30,0,0"
+                    Height="55"
+                    Width="70"
+                    Background="Transparent"
+                    BorderThickness="0.4,0.4,0.4,0.4">
+                <Image Source="/Res/UserIcon.png"
+                       Stretch="Fill"/>
+            </Button>
+
+            <TextBlock Text="Клиенты"
+                       Margin="1,5,0,0"                
+                       Width="50"
+                       Foreground="DarkSlateGray"
+                       FontWeight="Medium"/>
 
         </StackPanel>
 
