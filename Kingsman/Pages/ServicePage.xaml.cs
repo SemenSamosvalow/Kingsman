@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kingsman.ClassHelper;
+using Kingsman.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,6 +31,27 @@ namespace Kingsman.Pages
         private void GetListService()
         {
             LvService.ItemsSource = ClassHelper.EF.Context.Service.ToList();
+        }
+
+        private void BtnAddService_Click(object sender, RoutedEventArgs e)
+        {
+            AddServiceWindow addServiceWindow = new AddServiceWindow();
+            addServiceWindow.ShowDialog();
+        }
+
+        private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service; // получаем выбранную запись
+
+
+            CartServiceClass.ServiceCart.Add(service);
+
+            MessageBox.Show($"Услуга {service.NameOfService} добавлена в корзину!");
         }
     }
 }

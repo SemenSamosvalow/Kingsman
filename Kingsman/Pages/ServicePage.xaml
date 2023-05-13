@@ -57,7 +57,7 @@
                                 <Image.Source>
                                     <Binding Path ="Image">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>/Res/ClothesImage/</ImageSource>
+                                            <ImageSource>/Res/ClothesImage/NoImage</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
@@ -72,8 +72,26 @@
                                        FontSize="10"
                                        Margin="5 3"
                                        TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
+                            
+                            <Button x:Name="BtnAddToCart"
+                                    Width="150"
+                                    Height="30"
+                                    Margin="5 190 0 0"
+                                    Background="DarkSlateGray"
+                                    Foreground="Azure"
+                                    Content="Добавить в корзину"
+                                    FontWeight="Bold"
+                                    Click="BtnAddToCart_Click">
+                                
+                                <Button.Resources>
+                                    <Style TargetType="Border">
+                                        <Setter Property="CornerRadius" 
+                                                Value="10"/>
+                                    </Style>
+                                </Button.Resources>
+                            </Button>
+                            
                         </StackPanel>
-
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
@@ -87,14 +105,14 @@
                     FontWeight="Bold"
                     Content="Добавить услугу"
                     Foreground="Azure"
-                    Background="DarkSlateGray" Grid.Row="3" >
+                    Background="DarkSlateGray" Grid.Row="3" Click="BtnAddService_Click">
 
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" 
-                                Value="10"/>
-                </Style>
-            </Button.Resources>
+        <Button.Resources>
+            <Style TargetType="Border">
+                <Setter Property="CornerRadius" 
+                            Value="10"/>
+            </Style>
+        </Button.Resources>
 
         </Button>
     </Grid>

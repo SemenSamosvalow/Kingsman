@@ -74,6 +74,7 @@
           <Property Name="Cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Description" Type="varchar" MaxLength="50" />
           <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Image" Type="nvarchar" MaxLength="2048" />
         </EntityType>
         <EntityType Name="Staff">
           <Key>
@@ -337,6 +338,7 @@
           <Property Name="Cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="Image" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Service_Category" FromRole="Service" ToRole="Category" />
           <NavigationProperty Name="ClientService" Relationship="Self.FK_ClientService_Service" FromRole="Service" ToRole="ClientService" />
         </EntityType>
@@ -448,7 +450,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Entities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KingsmanEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Clients" EntityType="Self.Clients" />
           <EntitySet Name="ClientService" EntityType="Self.ClientService" />
@@ -533,7 +535,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище KingsmanModelContainer" CdmEntityContainer="Entities2">
+        <EntityContainerMapping StorageEntityContainer="Хранилище KingsmanModelContainer" CdmEntityContainer="KingsmanEntities1">
           <EntitySetMapping Name="Category">
             <EntityTypeMapping TypeName="KingsmanModel.Category">
               <MappingFragment StoreEntitySet="Category">
@@ -608,6 +610,7 @@
                 <ScalarProperty Name="Cost" ColumnName="Cost" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

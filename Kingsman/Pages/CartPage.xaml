@@ -53,10 +53,10 @@
                                 </Image.Source>
                             </Image>-->
 
-                            <TextBlock Text="{Binding ServiceName}"
+                            <TextBlock Text="{Binding NameOfService}"
                                        FontSize="18"
                                        Margin="5 3"/>
-                            <TextBlock Text="{Binding Price}"
+                            <TextBlock Text="{Binding Cost}"
                                        FontSize="18"
                                        Margin="5 3"/>
                             <TextBlock Text="{Binding Description}"

@@ -55,6 +55,7 @@ namespace Kingsman.Windows
         }
         private void BtnEditService_Click(object sender, RoutedEventArgs e)
         {
+            DB.Service newservice = new DB.Service();
             editService.NameOfService = TbNameService.Text;
             editService.Description = TbDiscService.Text;
             editService.Cost = Convert.ToDecimal(TbPriceService.Text);

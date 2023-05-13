@@ -25,6 +25,7 @@ namespace Kingsman.DB
         public decimal Cost { get; set; }
         public string Description { get; set; }
         public int CategoryId { get; set; }
+        public string Image { get; set; }
     
         public virtual Category Category { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
