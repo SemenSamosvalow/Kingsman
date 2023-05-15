@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,29 @@ namespace Kingsman.Pages
         public CartPage()
         {
             InitializeComponent();
+            GetListServise();
+
         }
+        private void GetListServise()
+        {
+            ObservableCollection<DB.Service> listCart = new ObservableCollection<DB.Service>(ClassHelper.CartServiceClass.ServiceCart);
+            LvCartService.ItemsSource = listCart;
+        }
+
+        private void BtnRomoveToCart_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DB.Service; // получаем выбранную запись
+
+            ClassHelper.CartServiceClass.ServiceCart.Remove(service);
+
+            GetListServise();
+        }
+
+
     }
 }

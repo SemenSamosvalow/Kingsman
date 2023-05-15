@@ -70,7 +70,7 @@ namespace Kingsman.Windows
                 addClient.Patronymic = TBPatronymic.Text;
             }
             addClient.Phone= TBPhone.Text;
-            //addClient.GenderCode = (CmbGedner.SelectedItem as DB.Gender).GenderName;
+            addClient.GenderCode = (CmbGedner.SelectedItem as DB.Gender).Id;
             addClient.Birthday =  Convert.ToDateTime(TBBirtday.Text);
 
             ClassHelper.EF.Context.Clients.Add(addClient);
@@ -79,7 +79,7 @@ namespace Kingsman.Windows
 
             MessageBox.Show("Пользователь успешно добавлен");
 
-
+            
 
         }
     }

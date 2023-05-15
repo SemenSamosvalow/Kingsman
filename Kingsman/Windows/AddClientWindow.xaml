@@ -1,0 +1,121 @@
+﻿<Window x:Class="Kingsman.Windows.AddClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kingsman.Windows"
+        mc:Ignorable="d"
+        Title="AddClientWindow" Height="850" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Res/Background.jpg" 
+                        Opacity="0.2"/>
+        </Grid.Background>
+
+        <StackPanel VerticalAlignment="Center">
+
+            <TextBlock Text="Добавление клиента"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0 10 0 0"/>
+            
+            <TextBlock Text="Введите имя клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 50 0 0"/>
+            
+            <TextBox x:Name="TbFNameClient"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите фамилию клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+
+            <TextBox x:Name="TbLNameClient"
+                         FontSize="18"                    
+                         Width="200"
+                         Height="30"
+                         Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите отчество клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+
+            <TextBox x:Name="TbPatronymicClient"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+            
+            <TextBlock Text="Введите дату рождения клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            
+            <TextBox x:Name="TbBirtdayClient"
+                     FontSize="18"
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <TextBlock Text="Выберите пол клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            
+            <ComboBox x:Name="CmbGenderClient"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+            
+            <TextBlock Text="Введите логин клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+
+            <TextBox x:Name="TbLogInClient"
+                     FontSize="18"
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+            
+            <TextBlock Text="Введите пароль клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+
+            <PasswordBox x:Name="PbPswClient"
+                     FontSize="18"
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <TextBlock Text="Введите телефон клиента"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+
+            <TextBox x:Name="TbPhoneClient"
+                     FontSize="18"
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <Button x:Name="BtnAddService"
+                    Content="Добавить"
+                    FontSize="18"                    
+                    Width="150"
+                    Height="40"
+                    Margin="0 40 0 0"
+                    Click="BtnAdd_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

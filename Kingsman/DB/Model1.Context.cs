@@ -15,10 +15,10 @@ namespace Kingsman.DB
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class KingsmanEntities1 : DbContext
+    public partial class KingsmanEntities2 : DbContext
     {
-        public KingsmanEntities1()
-            : base("name=KingsmanEntities1")
+        public KingsmanEntities2()
+            : base("name=KingsmanEntities2")
         {
         }
     

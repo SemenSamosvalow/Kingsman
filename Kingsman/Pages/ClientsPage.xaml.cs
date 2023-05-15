@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Kingsman.DB;
+using Kingsman.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,21 @@ namespace Kingsman.Pages
         public ClientsPage()
         {
             InitializeComponent();
+            GetListClients();
+        }
+
+        private void GetListClients()
+        {
+            LvClients.ItemsSource = ClassHelper.EF.Context.Clients.ToList();
+        }
+
+        private void BtnAddClient_Click(object sender, RoutedEventArgs e)
+        {
+            AddClientWindow addClientWindow = new AddClientWindow();
+            addClientWindow.ShowDialog();
+
+            GetListClients();
+
         }
     }
 }

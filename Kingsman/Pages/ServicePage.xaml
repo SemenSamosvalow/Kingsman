@@ -47,21 +47,19 @@
                     <Border BorderBrush="Gray"
                             BorderThickness="2"
                             Width="200"
-                            Height="300"
+                            Height="350"
                             Margin="16"
                             CornerRadius="8">
                         <StackPanel>
-                            <!--<Image Height="70"
-                                   Width="100" 
+                            <Image Height="180"
+                                   Width="180" 
                                    Margin="8">
                                 <Image.Source>
                                     <Binding Path ="Image">
-                                        <Binding.TargetNullValue>
-                                            <ImageSource>/Res/ClothesImage/NoImage</ImageSource>
-                                        </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
-                            </Image>-->
+                            </Image>
+                            
                             <TextBlock Text="{Binding NameOfService}"
                                        FontSize="14"
                                        Margin="5 3"/>
@@ -71,12 +69,12 @@
                             <TextBlock Text="{Binding Description}"
                                        FontSize="10"
                                        Margin="5 3"
-                                       TextWrapping="Wrap" FontFamily="Arial Rounded MT Bold"/>
+                                       TextWrapping="Wrap"/>
                             
                             <Button x:Name="BtnAddToCart"
                                     Width="150"
                                     Height="30"
-                                    Margin="5 190 0 0"
+                                    Margin="0 40 0 0"
                                     Background="DarkSlateGray"
                                     Foreground="Azure"
                                     Content="Добавить в корзину"
@@ -105,15 +103,17 @@
                     FontWeight="Bold"
                     Content="Добавить услугу"
                     Foreground="Azure"
-                    Background="DarkSlateGray" Grid.Row="3" Click="BtnAddService_Click">
+                    Background="DarkSlateGray" 
+                    Grid.Row="3" 
+                    Click="BtnAddService_Click">
 
-        <Button.Resources>
-            <Style TargetType="Border">
-                <Setter Property="CornerRadius" 
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" 
                             Value="10"/>
-            </Style>
-        </Button.Resources>
-
+                </Style>
+            </Button.Resources>
         </Button>
+        
     </Grid>
 </Page>

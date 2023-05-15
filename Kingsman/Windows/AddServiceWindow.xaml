@@ -31,6 +31,7 @@
                     Margin="0 10 0 0 ">
                 <Image x:Name="ImgImageService"/>
             </Border>
+            
             <Button x:Name="BtnChooseImage" 
                     Content="Выбрать изображение"
                     FontSize="16"                    

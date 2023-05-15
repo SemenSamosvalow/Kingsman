@@ -63,6 +63,7 @@ namespace Kingsman.Windows
             MessageBox.Show("Услуга добавлена", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
 
             this.Close();
+            
         }
     }
 }

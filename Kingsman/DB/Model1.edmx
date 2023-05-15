@@ -450,7 +450,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="KingsmanEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="KingsmanEntities2" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Clients" EntityType="Self.Clients" />
           <EntitySet Name="ClientService" EntityType="Self.ClientService" />
@@ -535,7 +535,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище KingsmanModelContainer" CdmEntityContainer="KingsmanEntities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище KingsmanModelContainer" CdmEntityContainer="KingsmanEntities2">
           <EntitySetMapping Name="Category">
             <EntityTypeMapping TypeName="KingsmanModel.Category">
               <MappingFragment StoreEntitySet="Category">
