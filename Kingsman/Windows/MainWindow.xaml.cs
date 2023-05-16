@@ -42,5 +42,11 @@ namespace Kingsman
         {
             MainFrame.NavigationService.Navigate(new Pages.ClientsPage());
         }
+
+        private void BtnReport_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.NavigationService.Navigate(new Pages.ReportPage());
+        }
     }
+
 }

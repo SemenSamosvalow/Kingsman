@@ -82,6 +82,22 @@
                        Foreground="DarkSlateGray"
                        FontWeight="Medium"/>
 
+            <Button x:Name="BtnReport"
+                    Margin="0,30,0,0"
+                    Height="55"
+                    Width="70"
+                    Background="Transparent"
+                    BorderThickness="0.4,0.4,0.4,0.4"
+                    Click="BtnReport_Click">
+                <Image Source="/Res/Folder.png"
+                       Stretch="Fill"/>
+            </Button>
+
+            <TextBlock Text="Отчеты"
+                       Margin="9,5,0,0"                
+                       Width="50"
+                       Foreground="DarkSlateGray"
+                       FontWeight="Medium"/>
         </StackPanel>
 
         <Frame x:Name="MainFrame" 

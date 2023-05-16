@@ -1,0 +1,117 @@
+﻿<Page x:Class="Kingsman.Pages.ReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Kingsman.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReportPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Вид отчета"
+                   FontSize="14"
+                   Foreground="DarkSlateGray"
+                   FontWeight="Medium"
+                   Grid.Row="3"
+                   Width="75"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+
+
+        <!--<ComboBox x:Name="CmbReport"
+                  Width="150"
+                  Height="30"
+                  HorizontalAlignment="Left"
+                  Grid.Row="1"
+                  SelectedIndex="0">
+            <TextBlock>Клиент_Сервис</TextBlock>
+            <TextBlock>Заказы</TextBlock>
+        </ComboBox>-->
+
+        <TextBlock Text="Отчеты"
+                   HorizontalAlignment="Center"
+                   FontSize="22"
+                   FontWeight="Bold" Margin="0,-4,0,4"/>
+
+        <ListView x:Name="LvClientService" 
+                  Grid.Row="2" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  Visibility="Hidden">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер заказа" Width="150" DisplayMemberBinding="{Binding OrderId}"/>
+                    <GridViewColumn Header="Код услуги" Width="150" DisplayMemberBinding="{Binding ServiceId}"/>
+                    <GridViewColumn Header="Название услуги" Width="150" DisplayMemberBinding="{Binding Service.NameOfService}"/>
+                    <GridViewColumn Header="Количество" Width="150" DisplayMemberBinding="{Binding Quantity}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView x:Name="LvOrders" 
+                  Grid.Row="2" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  Visibility="Hidden">
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер сотдрудника" Width="150" DisplayMemberBinding="{Binding StaffId}"/>
+                    <GridViewColumn Header="Фамилия сотдрудника" Width="150" DisplayMemberBinding="{Binding Staff.LastName}"/>
+                    <GridViewColumn Header="Должность сотдрудника" Width="150" DisplayMemberBinding="{Binding Staff.Position}"/>
+                    <GridViewColumn Header="Номер клиента" Width="150" DisplayMemberBinding="{Binding ClientId}"/>
+                    <GridViewColumn Header="Дата продажи" Width="150" DisplayMemberBinding="{Binding SaleDate}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="BtnOrders"
+                    Width="100"
+                    Height="30"
+                    Margin="10,10,640,10"
+                    FontWeight="Bold"
+                    Content="Заказы"
+                    Foreground="Azure"
+                    Background="DarkSlateGray" 
+                    Grid.Row="3" 
+                    Click="BtnOrders_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" 
+                            Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="BtnClientService"
+                    Width="100"
+                    Height="30"
+                    Margin="640,10,10,10"
+                    FontWeight="Bold"
+                    Content="КлиентСервис"
+                    Foreground="Azure"
+                    Background="DarkSlateGray" 
+                    Grid.Row="3" 
+                    Click="BtnClientService_Click">
+
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" 
+                            Value="10"/>
+                </Style>
+            </Button.Resources>
+
+        </Button>
+
+    </Grid>
+</Page>
