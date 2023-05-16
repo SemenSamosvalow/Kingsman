@@ -12,7 +12,7 @@
 ![image](https://user-images.githubusercontent.com/127530964/225834249-925fb622-4008-42d3-9c3b-1634d6d68415.png)
 
 Главное окно:
-![image](https://github.com/SemenSamosvalow/Kingsman/assets/127530964/ad96b3b2-eb5e-44a9-87f9-536e9593b239)
+![image](https://github.com/SemenSamosvalow/Kingsman/assets/127530964/44eab8c3-ebef-4159-8c55-a9f9ca0fd926)
 
 Страница услуг:
 ![image](https://github.com/SemenSamosvalow/Kingsman/assets/127530964/4fe8766a-5f37-4df0-bba6-62fc3d6a4e03)
@@ -22,5 +22,11 @@
 
 Страница клиентов:
 ![image](https://github.com/SemenSamosvalow/Kingsman/assets/127530964/4a6b5d9d-1300-4743-bcfa-c5f3d8d341d6)
+
+Страница отчетов:
+![image](https://github.com/SemenSamosvalow/Kingsman/assets/127530964/98948061-7e4b-4b11-9a6c-e7aa3dda0a1e)
+
+![image](https://github.com/SemenSamosvalow/Kingsman/assets/127530964/a49b891b-b12e-4028-922e-072bddee4315)
+
 
 
