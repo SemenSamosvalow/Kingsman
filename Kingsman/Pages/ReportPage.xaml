@@ -16,7 +16,7 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Вид отчета"
+        <TextBlock Text="Виды отчета"
                    FontSize="14"
                    Foreground="DarkSlateGray"
                    FontWeight="Medium"
