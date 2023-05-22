@@ -32,8 +32,8 @@
             </Border>-->
             <Button x:Name="BtnService"
                     Margin="0,20,0,0"
-                    Height="55"
-                    Width="70"
+                    Height="40"
+                    Width="60"
                     Click="BtnService_Click"
                     Background="Transparent"
                     BorderThickness="0.4,0.4,0.4,0.4">
@@ -49,9 +49,9 @@
                        FontWeight="Medium"/>
 
             <Button x:Name="BtnCart"
-                    Margin="0,30,0,0"
-                    Height="55"
-                    Width="70"
+                    Margin="0,20,0,0"
+                    Height="40"
+                    Width="60"
                     Background="Transparent"
                     Click="BtnCart_Click"
                     BorderThickness="0.4,0.4,0.4,0.4">
@@ -66,9 +66,9 @@
                        FontWeight="Medium"/>
             
             <Button x:Name="BtnClients"
-                    Margin="0,30,0,0"
-                    Height="55"
-                    Width="70"
+                    Margin="0,20,0,0"
+                    Height="40"
+                    Width="60"
                     Background="Transparent"
                     BorderThickness="0.4,0.4,0.4,0.4"
                     Click="Btn_Clients_Click">
@@ -82,10 +82,27 @@
                        Foreground="DarkSlateGray"
                        FontWeight="Medium"/>
 
+            <Button x:Name="BtnStaff"
+                    Margin="0,20,0,0"
+                    Height="40"
+                    Width="60"
+                    Background="Transparent"
+                    BorderThickness="0.4,0.4,0.4,0.4"
+                    Click="BtnStaff_Click">
+                <Image Source="/Res/Staff.png"
+                       Stretch="Fill"/>
+            </Button>
+
+            <TextBlock Text="Сотрудники"
+                       Margin="1,5,0,0"                
+                       Width="68"
+                       Foreground="DarkSlateGray"
+                       FontWeight="Medium"/>
+
             <Button x:Name="BtnReport"
-                    Margin="0,30,0,0"
-                    Height="55"
-                    Width="70"
+                    Margin="0,20,0,0"
+                    Height="40"
+                    Width="60"
                     Background="Transparent"
                     BorderThickness="0.4,0.4,0.4,0.4"
                     Click="BtnReport_Click">
