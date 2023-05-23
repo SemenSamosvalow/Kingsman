@@ -56,20 +56,21 @@ namespace Kingsman.Windows
             DB.Staff newStaff = new DB.Staff();
 
             newStaff.LastName = TbLNameStaff.Text;
-            newStaff.FirstName = TbLNameStaff.Text;
+            newStaff.FirstName = TbFNameStaff.Text;
             if (TbPatronymicStaff.Text != string.Empty)
             {
                 newStaff.Patronymic = TbPatronymicStaff.Text;
             }
-            newStaff.LogIn = TbLNameStaff.Text;
+            newStaff.LogIn = TbLogInStaff.Text;
             newStaff.Password = PbPswStaff.Password;
-            newStaff.Phone = TbLNameStaff.Text;
+            newStaff.Phone = TbPhoneStaff.Text;
+            newStaff.Position = TbPositionStaff.Text;
 
             ClassHelper.EF.Context.Staff.Add(newStaff);
 
             ClassHelper.EF.Context.SaveChanges();
 
-            MessageBox.Show("Клиент успешно добавлен!");
+            MessageBox.Show("Сотрудник успешно добавлен!");
 
         }
     }

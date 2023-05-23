@@ -11,7 +11,7 @@
     <Grid>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="50"/>
@@ -19,8 +19,9 @@
 
         <TextBlock Text="Список сотрудников"
                    HorizontalAlignment="Center"
-                   FontSize="24"
-                   FontWeight="Bold"/>
+                   FontSize="22"
+                   FontWeight="DemiBold"
+                   Foreground="DarkSlateGray"/>
 
         <ListView x:Name="LvStaff" 
                   Grid.Row="2" 

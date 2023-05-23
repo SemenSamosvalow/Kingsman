@@ -35,8 +35,8 @@ namespace Kingsman.Pages
 
         private void BtnAddStaff_Click(object sender, RoutedEventArgs e)
         {
-            AddClientWindow addClientWindow = new AddClientWindow();
-            addClientWindow.ShowDialog();
+            AddStaffWindow addStafftWindow = new AddStaffWindow();
+            addStafftWindow.ShowDialog();
 
             GetListStaff();
         }

@@ -37,7 +37,7 @@ namespace Kingsman.Pages
         {
             var button = sender as Button;
             if (button == null)
-            {
+            { 
                 return;
             }
             var service = button.DataContext as DB.Service; // получаем выбранную запись
@@ -47,6 +47,9 @@ namespace Kingsman.Pages
             GetListServise();
         }
 
+        private void BtnPay_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

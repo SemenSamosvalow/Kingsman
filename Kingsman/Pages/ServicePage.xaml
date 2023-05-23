@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="50"/>
@@ -19,8 +19,9 @@
         <TextBlock Text="Список услуг"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   FontSize="24"
-                   FontWeight="Bold"/>
+                   FontSize="22"
+                   FontWeight="DemiBold"
+                   Foreground="DarkSlateGray"/>
         <ListView x:Name="LvService" 
                   Grid.Row="2" 
                   d:ItemsSource="{d:SampleData ItemCount=5}"
@@ -47,7 +48,7 @@
                     <Border BorderBrush="Gray"
                             BorderThickness="2"
                             Width="200"
-                            Height="350"
+                            Height="300"
                             Margin="16"
                             CornerRadius="8">
                         <StackPanel>
@@ -74,7 +75,7 @@
                             <Button x:Name="BtnAddToCart"
                                     Width="150"
                                     Height="30"
-                                    Margin="0 40 0 0"
+                                    Margin="0 0 0 0"
                                     Background="DarkSlateGray"
                                     Foreground="Azure"
                                     Content="Добавить в корзину"
