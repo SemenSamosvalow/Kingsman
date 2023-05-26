@@ -93,7 +93,8 @@
                        Stretch="Fill"/>
             </Button>
 
-            <TextBlock Text="Сотрудники"
+            <TextBlock x:Name="TbStaff"
+                       Text="Сотрудники"
                        Margin="1,5,0,0"                
                        Width="68"
                        Foreground="DarkSlateGray"
@@ -110,7 +111,8 @@
                        Stretch="Fill"/>
             </Button>
 
-            <TextBlock Text="Отчеты"
+            <TextBlock x:Name="TbReport"
+                       Text="Отчеты"
                        Margin="9,5,0,0"                
                        Width="50"
                        Foreground="DarkSlateGray"

@@ -26,6 +26,10 @@ namespace Kingsman.Pages
         {
             InitializeComponent();
             GetListService();
+            if(ClassHelper.UserDataClass.Staff.Position == "Портной")
+            {
+                BtnAddService.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void GetListService()

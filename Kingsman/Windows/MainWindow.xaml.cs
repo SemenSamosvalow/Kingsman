@@ -24,6 +24,20 @@ namespace Kingsman
         public MainWindow()
         {
             InitializeComponent();
+            if (ClassHelper.UserDataClass.Staff.Position == "Портной")
+            {
+                BtnStaff.Visibility = Visibility.Collapsed;
+                TbStaff.Visibility = Visibility.Collapsed;
+                BtnReport.Visibility = Visibility.Collapsed;
+                TbReport.Visibility = Visibility.Collapsed;
+            }
+            else if (ClassHelper.UserDataClass.Staff.Position == "Продавец")
+            {
+                BtnStaff.Visibility = Visibility.Collapsed;
+                TbStaff.Visibility= Visibility.Collapsed;
+                BtnReport.Visibility = Visibility.Collapsed;
+                TbReport.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void BtnService_Click(object sender, RoutedEventArgs e)

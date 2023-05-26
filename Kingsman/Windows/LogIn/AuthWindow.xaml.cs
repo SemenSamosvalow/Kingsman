@@ -31,10 +31,24 @@ namespace Kingsman.Windows
 
             if (userAuth != null)
             {
+                ClassHelper.UserDataClass.Staff = userAuth;
+
+                switch (userAuth.Position)
+                {
+                    case "Директор":
+                        break;
+                    case "Продавец":
+                        break;
+                    case "Портной":
+                        break;
+                    default:
+                        break;
+                }
+
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
-            }
+            }        
             else
             {
                 MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

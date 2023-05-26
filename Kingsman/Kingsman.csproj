@@ -66,6 +66,7 @@
     </ApplicationDefinition>
     <Compile Include="ClassHelper\CartServiceClass.cs" />
     <Compile Include="ClassHelper\EF.cs" />
+    <Compile Include="ClassHelper\UserDataClass.cs" />
     <Compile Include="DB\Category.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -305,6 +306,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Res\Gar.png" />
     <Resource Include="Res\Staff.png" />
     <Resource Include="Res\Folder.png" />
   </ItemGroup>
